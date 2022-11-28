@@ -1,0 +1,182 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);*/
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 15px;
+}
+
+.bar {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  background-color: #cfd8dc;
+  /*background: rgba(255, 255, 255, 0.8);*/
+  margin-bottom: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+.bar .bar-info {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.75rem;
+  background: #fd7473;
+  color: white;
+  width: 20%;
+  position: relative;
+  height: 35px;
+  transition: width 3.3s ease-in-out;
+  font-size: 11px;
+}
+
+
+.bar .bar-info .percent {
+  float: right !important;
+}
+.percent { 
+  float: right !important;
+}
+.bar .bar-info.rsoc1 {
+  padding-top: 9px;
+  background: linear-gradient(#e4e400, #e4e400), #e4e400;
+}
+.bar .bar-info.rsoc2 {
+  padding-top: 9px;
+  background: linear-gradient(#18d75a, #18d75a), #18d75a;
+}
+.bar .bar-info.rsoc3 {
+  padding-top: 9px;
+  background: linear-gradient(#00b0f0, #00b0f0), #00b0f0;
+}
+.bar .bar-info.rsoc4 {
+  padding-top: 9px;
+  background: linear-gradient(#ff00ff, #ff00ff), #ff00ff;
+}
+.bar .bar-info.rsoc5 {
+  padding-top: 9px;
+  background: linear-gradient(#c39300, #c39300), #c39300;
+}
+.bar .bar-info.rsoc6 {
+  padding-top: 9px;
+  background: linear-gradient(#0000ff, #0000ff), #0000ff;
+}
+.bar .bar-info.rsoc7 {
+  padding-top: 9px;
+  background: linear-gradient(#d60093, #d60093), #d60093;
+}
+
+
+.bar .bar-info.rsoc8 {
+  padding-top: 9px;
+  background: linear-gradient(#ff0000, #ff0000), #ff0000;
+}
+.bar .bar-info.rsoc9 {
+  padding-top: 9px;
+  background: linear-gradient(#666600, #666600), #666600;
+}
+.bar .bar-info.rsoc10 {
+  padding-top: 9px;
+  background: linear-gradient(#ffcc00, #ffcc00), #ffcc00;
+}
+.bar .bar-info.rsoc11 {
+  padding-top: 9px;
+  background: linear-gradient(#0066cc, #0066cc), #0066cc;
+}
+.bar .bar-info.rsoc12 {
+  padding-top: 9px;
+  background: linear-gradient(#00cc99, #00cc99), #00cc99;
+}
+.bar .bar-info.rsoc13 {
+  padding-top: 9px;
+  background: linear-gradient(#cc00ff, #cc00ff), #cc00ff;
+}
+.bar .bar-info.rsoc14 {
+  padding-top: 9px;
+ /* background: linear-gradient(#cc00ff, #cc00ff), #cc00ff;*/
+}
+.bar .bar-info.rsoc15 {
+  padding-top: 9px;
+  background: linear-gradient(#990066, #990066), #990066;
+}
+.bar .bar-info.rsoc16 {
+  padding-top: 9px;
+  background: linear-gradient(#99cc00, #99cc00), #99cc00;
+}
+.bar .bar-info.rsoc17 {
+  padding-top: 9px;
+  background: linear-gradient(#999900, #999900), #999900;
+}
+.bar .bar-info.rsoc18 {
+  padding-top: 9px;
+  background: linear-gradient(#cc9900, #cc9900), #cc9900;
+}
+.bar .bar-info.rsoc19 {
+  padding-top: 9px;
+  background: linear-gradient(#ff9966, #ff9966), #ff9966;
+}
+.bar .bar-info.rsoc20 {
+  padding-top: 9px;
+  background: linear-gradient(#39a739, #39a739), #39a739;
+}
+.bar .bar-info.rsoc21 {
+  padding-top: 9px;
+  background: linear-gradient(#99cc66, #99cc66), #99cc66;
+}
+.bar .bar-info.rsoc22 {
+  padding-top: 9px;
+  background: linear-gradient(#66cccc, #66cccc), #66cccc;
+}
+.bar .bar-info.rsoc23 {
+  padding-top: 9px;
+  background: linear-gradient(#9966cc, #9966cc), #9966cc;
+}
+.bar .bar-info.rsoc24 {
+  padding-top: 9px;
+  background: linear-gradient(#cc33cc, #cc33cc), #cc33cc;
+}
+.bar .bar-info.rsoc25 {
+  padding-top: 9px;
+  background: linear-gradient(#ff6699, #ff6699), #ff6699;
+}
+.bar .bar-info.rsoc26 {
+  padding-top: 9px;
+  background: linear-gradient(#cccc33, #cccc33), #cccc33;
+}
+.bar .bar-info.rsoc27 {
+  padding-top: 9px;
+  background: linear-gradient(#996633, #996633), #996633;
+}
+.bar .bar-info.rsoc28 {
+  padding-top: 9px;
+  background: linear-gradient(#ff9966, #ff9966), #ff9966;
+}
+.bar .bar-info.rsoc29 {
+  padding-top: 9px;
+  background: linear-gradient(#ff99ff, #ff99ff), #ff99ff;
+}
+.bar .bar-info.rsoc30 {
+  padding-top: 9px;
+  background: linear-gradient(#cc9999, #cc9999), #cc9999;
+}
+.bar .bar-info.rsoc31 {
+  padding-top: 9px;
+  background: linear-gradient(#6699cc, #6699cc), #6699cc;
+}
+.bar .bar-info.rsoc32 {
+  padding-top: 9px;
+  background: linear-gradient(#00cc66, #00cc66), #00cc66;
+}
+.bar .bar-info.rsoc33 {
+  padding-top: 9px;
+  background: linear-gradient(#99cc66, #99cc66), #99cc66;
+}
+.bar .bar-info.rsoc34 {
+  padding-top: 9px;
+  background: linear-gradient(#99ccff, #99ccff), #99ccff;
+}
+.bar .bar-info.rsoc35 {
+  padding-top: 9px;
+  background: linear-gradient(#cc99cc, #cc99cc), #cc99cc;
+}
+

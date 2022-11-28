@@ -1,0 +1,33 @@
+.btn:focus {
+        outline: none;
+      }
+      .hidden {
+        display: none;
+      }
+      .listed {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .p-top {
+        padding-top: 7px;
+      }
+      .td-padding {
+        padding-top: 15px !important;
+      }
+      .container-fluid {
+        padding-bottom: 10px;
+        margin-top: 1px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .paddingLF {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .inactiveLink {
+        pointer-events: none;
+        cursor: default;
+      }
+      .buttons-wrapper {
+        display: inline-block;
+      }
