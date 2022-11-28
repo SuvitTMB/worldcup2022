@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+-->
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <!--<link href='css/add.css' rel="stylesheet" type="text/css">-->
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/rank.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+  <style type="text/css">
+    .w3-container, .w3-panel {
+      padding:0px;
+    }
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 12px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="navbar1">
+    <center>
+      <div style="max-width:400px;">
+        <div class="iconlink" onClick="window.location='home.html';">
+          <div style="width:28px;"><img src="./img/player.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ผู้แข่งขัน</div>
+        </div>
+        <div class="iconlink" onClick="window.location='selectteam.html';">
+          <div style="width:28px;"><img src="./img/home.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">เลือกทีม</div>
+        </div>
+        <div class="iconlink" onClick="window.location='ranking.html';">
+          <div style="width:28px;"><img src="./img/ranking.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">อันดับแข่ง</div>
+        </div>
+        <div class="iconlink" onClick="window.location='social.html';">
+          <div style="width:28px;"><img src="./img/social.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">พูดคุย</div>
+        </div>
+        <div class="iconlink" onClick="window.location='about.html';" style="background-color: #002d63;">
+          <div style="width:28px;"><img src="./img/about.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">กิจกรรม</div>
+        </div>
+     </div>
+    </center>
+  </div>
+
+
+  <main id="main">
+    <div class="container" style="margin-top:70px;">
+      <center>
+        <div class='btn-t33' style='background-color: #94a9b3;border: solid #94a9b3 1px;'>เกี่ยวกับกิจกรรม</div>
+          <div class="clr"></div>
+          <div style="margin-top:15px;"><img src="./img/logo-cup.png" style="width:70px;"></div>
+          <div style="color:#f68b1f; font-size: 12px; font-weight: 600;padding:8px;">การแข่งขันฟุตบอล World Cup 2022</div>
+
+          <div class='btn-t33' style='margin-top:25px;background-color: #94a9b3;border: solid #94a9b3 1px;'>กติกาการแข่งขัน</div>
+          <ul style="text-align: left;padding-right: 10px; margin-left: -10px; font-size: 11px;">
+            <li>ผู้แข่งขันสามารถเลือกทุกทีมที่กำหนดในตารางการแข่งขันได้ทุกทีม</li>
+            <li>กรณีไม่ได้เลือกทีม หรือไม่ได้เลือกที่ชนะ หากการแข่งขันจบแล้ว หรือระบบปิดให้เลือกแล้วจะไม่ได้คะแนนในคู่ที่แข่งนั้นๆ</li>
+            <li>กรณีทายผลการแข่งขันถูก จะได้รับ 3 คะแนน</li>
+            <li>กรณีทายผลการแข่งขันผิด จะได้ไม่ได้รับคะแนน</li>
+            <li>ผู้แข่งขันจะไม่สามารถทำการเลือกทีมย้อนหลังการแข่งขันได้</li>
+            <li>หากมีการยืนยันการเลือกทีมที่คิดว่าจะชนะแล้ว จะไม่สามารถเปลี่ยนแปลงทีมใหม่ได้</li>
+            <li>ระบบจะปิดไม่ให้เลือกทีมก่อนการแข่งขันที่จะเกิดขึ้นไม่เกิน 12 ชั่วโมง</li>
+            <li>กติกาการแข่งขันสามารถเปลี่ยนแปลงได้ตามความเหมาะสม</li>
+          </ul>
+          <div class="clr"></div>
+          <div class='btn-t33' style='margin-top:25px;background-color: #94a9b3;border: solid #94a9b3 1px;'>การเลือกเชียร์ทีม</div>
+          <ul style="text-align: left;padding-right: 10px; margin-left: -10px; font-size: 11px;">
+            <li>ผู้เชียร์ทีมจะสามารถทำการเลือกทีมได้หากการแข่งขันนั้น ๆ ยัไม่ได้เริ่มแข่งขัน</li>
+            <li>ให้คลิกเลือกทีมที่ต้องการจะเชียร์</li>
+            <li>ผู้เลือกสามารถเปลี่ยนทีมที่จะเชียร์ได้โดยการกดเลือกทีมใหม่</li>
+            <li>เมื่อตัดสินใจเลือกทีมเชียร์แล้ว ให้คลิกปุ่มเพื่อยืนยันการเลือกทีม</li>
+            <li>กดปิดหน้าจอ ระบบจะทำการบันทึกรายการที่ท่านได้ทำการเลือกไว้ แล้วรอผลการแข่งขัน</li>
+            <li>ผู้แข่งขันจะไม่สามารถทำการเลือกทีมแข่งขันของรอบนี้ได้อีก (ไม่สามารถเปลี่ยนทีมได้)</li>
+            <li>รอผลการแข่งขันเพื่อลุ้นรับคะแนนสะสม</li>
+          </ul>
+          <div class="clr"></div>
+          <div class='btn-t33' style='margin-top:25px;background-color: #94a9b3;border: solid #94a9b3 1px;'>ของรางวัลสำหรับการแข่งขัน</div>
+          <div><img src="./img/starbucks-card.jpg" style="width:250px;"></div>
+          <ul style="text-align: left;padding-right: 10px; margin-left: -10px; font-size: 11px;">
+            <li>รางวัลบัตร Starbuck มูลค่า 1,000 บาท จำนวน 10 รางวัล สำหรับผู้ที่ทำคะแนนได้สูงสุด 10 อันดับแรก (กรณีที่มีคะแนนเท่ากันใช้วิธีการจับฉลากเลือกผู้ได้รับรางวัล)</li>
+            <li>รางวัลกรเป๋า ttb มูลค่า 240 บาท สำหรับผู้ที่ทำคะแนนในอันดับที่ 11-30 แรกของการแข่งขัน (อันดับที่ 11-30 แรกของการแข่งขัน)</li>
+            <li>ของรางวัลที่ได้ไม่สามารถเปลี่ยนเป็นเงินสดได้</li>
+            <li>เงื่อนไขและกติการการแข่งขันสามารถเปลี่ยนแปลงได้ตามความเหมาะสม</li>
+            <li>การตัดสินของคณะผู้จัดทำถือเป็นที่สิ้นสุด</li>
+          </ul>
+          <div class="clr"></div>
+
+
+
+      </center>
+
+<!--
+      <center>
+        <div class='btn-t33' style='background-color: #94a9b3;border: solid #94a9b3 1px;'>คลิกเลือกทีมที่คุณคิดว่าจะชนะ</div>
+        <div id="DisplayTeam"></div>
+      </center>
+-->
+    </div>
+  </main>
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+      <div class="w3-container" style="width:95%;margin:auto;min-height: 270px;">
+        <div id="DisplayTeamSelected"></div>
+      </div>
+    </div>
+    <div class="clr" style="height:70px;"></div>
+  </div>
+
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <div class="footer-main">
+      @<span class="footer-font-green">LINE</span> 
+      <span class="footer-font-navi">Retail</span> 
+      <span class="footer-font-blue">So</span><span class="footer-font-org">ciety</span>
+    </div>
+    <div class="clr" style="height: 40px;"></div>
+  </footer>
+
+<script src="./js/xxx.js"></script>
+</body>
+</html>

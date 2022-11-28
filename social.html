@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+-->
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <!--<link href='css/add.css' rel="stylesheet" type="text/css">-->
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/rank.css">
+  <link href='css/bento.css' rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+  <style>
+  .list {
+      /*margin: 0px auto;
+      width: 80%;
+      box-sizing: border-box;*/
+  }
+  .list-element {
+      display: none;
+  }
+  #loadmore {
+      margin: 25px auto 0px;
+      display: table;
+      border: none;
+      padding: 8px 30px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 30px;
+      background-color: #2196f3;
+  }
+  #loadmore:hover {
+    background: #f68b1f;
+  }
+  .list .list-element:nth-child(1) {
+      display: block;
+  }
+  .list .list-element:nth-child(2) {
+      display: block;
+  }
+  .list .list-element:nth-child(3) {
+      display: block;
+  }
+  .list .list-element:nth-child(4) {
+      display: block;
+  }
+  .list .list-element:nth-child(5) {
+      display: block;
+  }
+  .list .list-element:nth-child(6) {
+      display: block;
+  }
+  .list .list-element:nth-child(7) {
+      display: block;
+  }
+  .list .list-element:nth-child(8) {
+      display: block;
+  }
+  </style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 12px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="navbar1">
+    <center>
+      <div style="max-width:400px;">
+        <div class="iconlink" onClick="window.location='home.html';">
+          <div style="width:28px;"><img src="./img/player.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ผู้แข่งขัน</div>
+        </div>
+        <div class="iconlink" onClick="window.location='selectteam.html';">
+          <div style="width:28px;"><img src="./img/home.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">เลือกทีม</div>
+        </div>
+        <div class="iconlink" onClick="window.location='ranking.html';">
+          <div style="width:28px;"><img src="./img/ranking.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">อันดับแข่ง</div>
+        </div>
+        <div class="iconlink" onClick="window.location='social.html';" style="background-color: #002d63;">
+          <div style="width:28px;"><img src="./img/social.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">พูดคุย</div>
+        </div>
+        <div class="iconlink" onClick="window.location='about.html';">
+          <div style="width:28px;"><img src="./img/about.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">กิจกรรม</div>
+        </div>
+     </div>
+    </center>
+  </div>
+
+<!--
+  <div class="navbar2">
+    <div class="msb-reply">
+      <textarea id="TextMamo" placeholder="พิมพ์วิธีการบอกรักแม่ของคุณ ที่นี่..."></textarea>
+      <button style="background: #f68b1f;" onclick="CheckMemo()"><i class="fa fa-paper-plane-o"></i></button>
+    </div>
+  </div>
+-->
+  <main id="main">
+    <div class="container" style="margin-top:70px;">
+      <center>
+        <div class='btn-t33' style='background-color: #94a9b3;border: solid #94a9b3 1px;'>พูดคุยภาษาบอล</div>
+      </center>
+      <div class="container bootstrap snippets bootdey" style="padding-left:5px; padding-right: 5px;">
+        <div class="tile tile-alt" id="messages-main">
+          <div class="message-feed media" style="margin-top: 20px;">
+            <div id="DisplayMemo" class="list"></div>
+            <button id="loadmore">Load More...</button>
+            <!--<div class="clr" height="30px;"></div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="msb-reply">
+      <textarea id="TextMamo" placeholder="พูดคุยภาษาบอลได้ที่นี่..."></textarea>
+      <button style="background: #f68b1f;" onclick="CheckMemo()"><i class="fa fa-paper-plane-o"></i></button>
+    </div>
+    <div class="clr" style="height: 46px;"></div>
+
+  </main>
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+      <div class="w3-container" style="width:95%;margin:auto;min-height: 270px;">
+        <div id="DisplayTeamSelected"></div>
+      </div>
+    </div>
+    <div class="clr" style="height:70px;"></div>
+  </div>
+
+<!--
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <div class="footer-main">
+      @<span class="footer-font-green">LINE</span> 
+      <span class="footer-font-navi">Retail</span> 
+      <span class="footer-font-blue">So</span><span class="footer-font-org">ciety</span>
+    </div>
+    <div class="clr" style="height: 40px;"></div>
+  </footer>
+-->
+<script src="./js/social.js"></script>
+</body>
+</html>

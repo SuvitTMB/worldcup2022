@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <!--<link href='css/add.css' rel="stylesheet" type="text/css">-->
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <!--<link href='css/w3.css' rel="stylesheet" type="text/css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <style type="text/css">
+    .w3-container, .w3-panel {
+      padding:0px;
+    }
+  </style>
+</head>
+
+<body class="body1" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background-color: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 12px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container" style="text-align: center;margin:90px auto 30px auto;">
+      <div style="margin-top:30px; margin-bottom: 40px;"><img src="./img/logo_worldcup.png" style="width:100%; max-width: 150px;"></div>
+      <div id="loading" style="margin-top:20px;"><img src="./img/loading1.gif" style="width:50px;"></div>
+      <div id="NoService" style="display: none;margin-top:10px;">
+        <div class="btn-t8">คุณไม่ได้รับสิทธิ์ในการเข้าถึงข้อมูลนี้<br>กรุณาบอกเราว่าคุณมีความจำเป็นอย่างไร<br>
+          <a href="mailto:suvit.cha@ttbbank.com&subject=แจ้งขอใช้งาน BBD Champion League&body=กรุณาระบุเหตุผลที่ต้องการใช้งาน ชื่อ-นามสกุล และรหัสพนักงาน" style="text-decoration: none;"><div class="btn-t2">แจ้งเหตุผลเข้าใช้ระบบงาน</div></a>
+        </div>
+      </div>
+      <div id="OldSurvey" style="display: none;margin-top:10px;">
+        <div style="margin:auto;">
+
+          <div style="position: relative;"><img src="./img/bg-score1.png" style="width:280px;">
+            <div style="position: absolute;margin:-128px auto;width:100%;">
+              <div style="font-size: 11px; color:#fff;">ร่วมสนุกไปกับ</div>
+              <div style="font-size: 11px; color:#fff;margin-top:30px;">การแข่งขันฟุตบอลโลก 2022<br>รอบที่ 2 (สะสมคะแนน)<div>
+              <div class="btn-survey" onclick="window.location.href='home.html';" style="background-color: #f68b1f;border:2px solid #fff;">คลิกเพื่อร่วมช่วงชิงคะแนน</div>
+            </div>
+            <div class="clr"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+      <div class="w3-container" style="width:100%;margin:auto;height: 350px;">
+<!--
+        <center>
+          <div class="btn-t33" style="margin-top:20px;">Welcome to</div>
+          <div><img src="./img/Asset 1League.png" style="width:100%; max-width: 180px;margin:15px auto;"></div>
+          <div class="clr"></div>
+          <div id="overlay" class="btn-t22" onclick="CloseAll()" style="margin-top:10px; width:120px;">ปิดหน้าต่างนี้</div>
+        </center>
+    <div class="clr" style="height:50px;"></div>
+-->
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container-fluid text-center">
+    <div id="isLoggedIn" style="color:#fff;"></div>
+    <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <div class="footer-main" style="color:#fff;">
+      @<span class="footer-font-greenn" style="color:#fff;">LINE</span> 
+      <span class="footer-font-navi" style="color:#fff;">Retail</span> 
+      <span class="footer-font-blue" style="color:#fff;">So</span><span class="footer-font-org" style="color:#fff;">ciety</span>
+    </div>
+  </footer>
+
+
+<script src="./js/index.js"></script>
+</body>
+</html>
