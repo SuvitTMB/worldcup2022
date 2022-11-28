@@ -1,1 +1,49 @@
-var _0x36df16=_0x1e85;(function(_0x150aaa,_0x1713e9){var _0x4d146f=_0x1e85,_0x3a23d9=_0x150aaa();while(!![]){try{var _0x40d87b=-parseInt(_0x4d146f(0x10f))/0x1+parseInt(_0x4d146f(0x116))/0x2+-parseInt(_0x4d146f(0x118))/0x3+-parseInt(_0x4d146f(0x10c))/0x4+-parseInt(_0x4d146f(0x103))/0x5+-parseInt(_0x4d146f(0x117))/0x6+parseInt(_0x4d146f(0x11b))/0x7;if(_0x40d87b===_0x1713e9)break;else _0x3a23d9['push'](_0x3a23d9['shift']());}catch(_0x137e62){_0x3a23d9['push'](_0x3a23d9['shift']());}}}(_0x3e74,0xd9631));function _0x1e85(_0x626289,_0x1d9427){var _0x3e7497=_0x3e74();return _0x1e85=function(_0x1e852f,_0x3ab517){_0x1e852f=_0x1e852f-0x103;var _0xdae10=_0x3e7497[_0x1e852f];return _0xdae10;},_0x1e85(_0x626289,_0x1d9427);}function _0x3e74(){var _0x45f006=['323045elWDDT','\x22\x20class=\x22add-profile\x22\x20style=\x22margin:-60px\x20auto\x2020px\x20auto;\x22></div>','en-US','ready','index.html','<div\x20class=\x22text-44\x22\x20style=\x22margin-top:-8px;\x22>คะแนน</div>','Asia/Jakarta','1138480GIuHyo','6604980rUlkTG','3442956VIYKvH','LineName','LinePicture','31458413lEiKDD','346675WscjOZ','</div>','getItem','EmpID_WorldCup','<div\x20class=\x22btn-t1\x22\x20onClick=window.location=\x22selectteam.html\x22;>ไปเลือกทีมกันเถอะ</div>','<div><img\x20src=\x22','toLocaleString','EmpName_WorldCup','#MyProfile','6128080xGzoJo','<div\x20class=\x22NameLine\x22>','href'];_0x3e74=function(){return _0x45f006;};return _0x3e74();}var dateString=new Date()[_0x36df16(0x109)](_0x36df16(0x111),{'timeZone':_0x36df16(0x115)});$(document)[_0x36df16(0x112)](function(){var _0x595cd5=_0x36df16;sessionStorage[_0x595cd5(0x105)](_0x595cd5(0x106))==null&&(location[_0x595cd5(0x10e)]=_0x595cd5(0x113)),ProfileUser();});function ProfileUser(){var _0x1d4ed5=_0x36df16,_0xc597da='';_0xc597da+=_0x1d4ed5(0x108)+sessionStorage[_0x1d4ed5(0x105)](_0x1d4ed5(0x11a))+_0x1d4ed5(0x110),_0xc597da+=_0x1d4ed5(0x10d)+sessionStorage[_0x1d4ed5(0x105)](_0x1d4ed5(0x119))+_0x1d4ed5(0x104),_0xc597da+='<div\x20style=\x22color:#f68b1f;\x20font-size:\x2013px;\x20font-weight:\x20600;\x22><center>'+sessionStorage['getItem'](_0x1d4ed5(0x10a))+_0x1d4ed5(0x104),_0xc597da+='<div\x20class=\x22text-44\x22\x20style=\x22margin-top:20px;\x22>คะแนนล่าสุดของคุณ<br><br><img\x20src=\x22./img/logo-cup.png\x22\x20style=\x22width:40px;\x22></div>',_0xc597da+='<div\x20style=\x22font-size:40px;font-weight:600;\x20color:#0056ff;\x22>'+sessionStorage[_0x1d4ed5(0x105)]('UserPoint_WorldCup')+_0x1d4ed5(0x104),_0xc597da+=_0x1d4ed5(0x114),_0xc597da+=_0x1d4ed5(0x107),$(_0x1d4ed5(0x10b))['html'](_0xc597da);}
+var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
+
+
+$(document).ready(function () {
+  if(sessionStorage.getItem("EmpID_WorldCup")==null) { location.href = "index.html"; }
+  Connect_DB();
+});
+
+
+
+function Connect_DB() {
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
+    authDomain: "retailproject-6f4fc.firebaseapp.com",
+    projectId: "retailproject-6f4fc",
+    storageBucket: "retailproject-6f4fc.appspot.com",
+    messagingSenderId: "653667385625",
+    appId: "1:653667385625:web:a5aed08500de80839f0588",
+    measurementId: "G-9SKTRHHSW9"
+  };
+  firebase.initializeApp(firebaseConfig);
+  dbWorldMember = firebase.firestore().collection("WorldMember2022");
+  CalPointUser();
+  ProfileUser();
+}
+
+function CalPointUser() {
+}
+
+
+function ProfileUser() {
+  var str = "";
+  var xMyPoint = 0;
+  dbWorldMember.where('LineID','==',sessionStorage.getItem("LineID"))
+  .get().then((snapshot)=> {
+    snapshot.forEach(doc=> {
+      xMyPoint = doc.data().UserPoint;
+      sessionStorage.setItem("UserPoint_WorldCup", doc.data().UserPoint);
+    });    
+    str += '<div><img src="'+ sessionStorage.getItem("LinePicture") +'" class="add-profile" style="margin:-60px auto 20px auto;"></div>';
+    str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
+    str += '<div style="color:#f68b1f; font-size: 13px; font-weight: 600;"><center>'+ sessionStorage.getItem("EmpName_WorldCup")+'</div>';
+    str += '<div class="text-44" style="margin-top:20px;">คะแนนล่าสุดของคุณ<br><br><img src="./img/logo-cup.png" style="width:40px;"></div>';
+    str += '<div style="font-size:40px;font-weight:600; color:#0056ff;">'+ xMyPoint +'</div>';
+    str += '<div class="text-44" style="margin-top:-8px;">คะแนน</div>';
+    str += '<div class="btn-t1" onClick=window.location="selectteam.html";>ไปเลือกทีมกันเถอะ</div>';
+    $("#MyProfile").html(str);  
+  });
+}
